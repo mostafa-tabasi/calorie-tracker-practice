@@ -1,0 +1,15 @@
+object Libs {
+  const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose"
+  const val CORE_KTX = "androidx.core:core-ktx"
+  const val COMPOSE_UI = "androidx.compose.ui:ui"
+  const val COMPOSE_MATERIAL = "androidx.compose.material:material"
+  const val COMPOSE_TEST = "androidx.compose.ui:ui-test-junit4"
+  const val COMPOSE_TEST_MANIFEST = "androidx.compose.ui:ui-test-manifest"
+  const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling"
+  const val COMPOSE_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
+  const val EXT_JUNIT = "androidx.test.ext:junit"
+  const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core"
+  const val JUNIT = "junit:junit"
+  const val LIFECYCLE_RUNTIME_KTX = "androidx.lifecycle:lifecycle-runtime-ktx"
+  const val MATERIAL = "com.google.android.material:material"
+}

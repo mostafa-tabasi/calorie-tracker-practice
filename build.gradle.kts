@@ -1,0 +1,26 @@
+buildscript {
+  repositories {
+    maven  (url = "https://maven.google.com" )
+    google()
+    mavenCentral()
+    jcenter()
+  }
+  dependencies {
+    classpath("com.android.tools.build:gradle:${Versions.ANDROID_GRADLE_PLUGIN}")
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}")
+    classpath("com.google.gms:google-services:${Versions.GOOGLE_SERVICES}")
+    classpath("androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.NAVIGATION}")
+    classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT_AGP}")
+  }
+}
+
+plugins {
+  id(Plugins.ANDROID_APPLICATION) version Versions.ANDROID_GRADLE_PLUGIN apply false
+  id(Plugins.ANDROID_LIBRARY) version Versions.ANDROID_GRADLE_PLUGIN apply false
+  id(Plugins.KOTLIN_ANDROID) version Versions.KOTLIN apply false
+  id(Plugins.KOTLIN_JVM) version Versions.KOTLIN apply false
+}
+
+tasks.register("clean", Delete::class) {
+  delete(rootProject.buildDir)
+}
