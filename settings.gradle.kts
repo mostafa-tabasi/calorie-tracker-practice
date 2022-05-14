@@ -19,14 +19,15 @@ dependencyResolutionManagement {
 }
 
 include(
-  ":app",
-  ":core",
-  ":tracker",
-  ":onboarding",
-  ":onboarding:onboarding_domain",
-  ":onboarding:onboarding_presentation",
-  ":tracker:tracker_data",
-  ":tracker:tracker_domain",
-  ":tracker:tracker_presentation",
-  ":depconstraints",
+ ":app",
+ ":core",
+ ":core-ui",
+ ":dep-constraints",
+ ":onboarding",
+ ":onboarding:onboarding_domain",
+ ":onboarding:onboarding_presentation",
+ ":tracker",
+ ":tracker:tracker_data",
+ ":tracker:tracker_domain",
+ ":tracker:tracker_presentation",
 )

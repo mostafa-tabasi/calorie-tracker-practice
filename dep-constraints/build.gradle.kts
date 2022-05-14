@@ -11,9 +11,16 @@ java {
 
 dependencies {
   constraints {
+    api("${Libs.ACTIVITY_COMPOSE}:${Versions.ACTIVITY_COMPOSE}")
     api("${Libs.CORE_KTX}:${Versions.CORE_KTX}")
+    api("${Libs.COMPOSE_MATERIAL}:${Versions.COMPOSE}")
     api("${Libs.COMPOSE_TOOLING}:${Versions.COMPOSE}")
+    api("${Libs.COMPOSE_TEST}:${Versions.COMPOSE}")
     api("${Libs.COMPOSE_TEST_MANIFEST}:${Versions.COMPOSE}")
+    api("${Libs.COMPOSE_UI}:${Versions.COMPOSE}")
+    api("${Libs.EXT_JUNIT}:${Versions.EXT_JUNIT}")
+    api("${Libs.ESPRESSO_CORE}:${Versions.ESPRESSO_CORE}")
+    api("${Libs.LIFECYCLE_RUNTIME_KTX}:${Versions.LIFECYCLE_RUNTIME_KTX}")
     api("${Libs.MATERIAL}:${Versions.MATERIAL}")
   }
 }

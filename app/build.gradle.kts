@@ -45,9 +45,15 @@ android {
 }
 
 dependencies {
-  api(platform(project(":depconstraints")))
-  kapt(platform(project(":depconstraints")))
-  androidTestApi(platform(project(":depconstraints")))
+  api(platform(project(Modules.DEP_CONSTRAINTS)))
+  kapt(platform(project(Modules.DEP_CONSTRAINTS)))
+  implementation(project(Modules.CORE))
+  implementation(project(Modules.CORE_UI))
+  implementation(project(Modules.ONBOARDING_DOMAIN))
+  implementation(project(Modules.ONBOARDING_PRESENTATION))
+  implementation(project(Modules.TRACKER_DATA))
+  implementation(project(Modules.TRACKER_DOMAIN))
+  implementation(project(Modules.TRACKER_PRESENTATION))
 
   implementation(Libs.CORE_KTX)
   implementation(Libs.COMPOSE_UI)

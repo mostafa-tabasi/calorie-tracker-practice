@@ -1,5 +1,6 @@
 object Libs {
   const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose"
+  const val APP_COMPAT = "androidx.appcompat:appcompat"
   const val CORE_KTX = "androidx.core:core-ktx"
   const val COMPOSE_UI = "androidx.compose.ui:ui"
   const val COMPOSE_MATERIAL = "androidx.compose.material:material"
