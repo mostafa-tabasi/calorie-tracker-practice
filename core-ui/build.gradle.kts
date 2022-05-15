@@ -34,6 +34,9 @@ android {
     buildFeatures {
         compose = true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
+    }
 }
 
 dependencies {
@@ -41,9 +44,15 @@ dependencies {
     kapt(platform(project(Modules.DEP_CONSTRAINTS)))
 
     implementation(Libs.CORE_KTX)
-    implementation(Libs.APP_COMPAT)
+    implementation(Libs.COMPOSE_UI)
+    implementation(Libs.COMPOSE_MATERIAL)
     implementation(Libs.MATERIAL)
+    implementation(Libs.ACTIVITY_COMPOSE)
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)
     androidTestImplementation(Libs.ESPRESSO_CORE)
+    androidTestImplementation(Libs.COMPOSE_TEST)
+    debugImplementation(Libs.COMPOSE_TOOLING)
+    debugImplementation(Libs.COMPOSE_TOOLING_PREVIEW)
+    debugImplementation(Libs.COMPOSE_TEST_MANIFEST)
 }
