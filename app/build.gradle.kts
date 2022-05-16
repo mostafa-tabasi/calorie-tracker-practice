@@ -45,7 +45,7 @@ android {
 }
 
 dependencies {
-  api(platform(project(Modules.DEP_CONSTRAINTS)))
+  implementation(platform(project(Modules.DEP_CONSTRAINTS)))
   kapt(platform(project(Modules.DEP_CONSTRAINTS)))
   implementation(project(Modules.CORE))
   implementation(project(Modules.CORE_UI))
