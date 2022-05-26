@@ -54,6 +54,6 @@ dependencies {
   androidTestImplementation(Libs.EXT_JUNIT)
   androidTestImplementation(Libs.ESPRESSO_CORE)
   androidTestImplementation(Libs.COMPOSE_TEST)
-  debugImplementation(Libs.COMPOSE_TOOLING)
+  debugImplementation(Libs.COMPOSE_UI_TOOLING)
   debugImplementation(Libs.COMPOSE_TEST_MANIFEST)
 }

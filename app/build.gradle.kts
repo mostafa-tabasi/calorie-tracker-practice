@@ -1,5 +1,6 @@
 plugins {
   id(Plugins.ANDROID_APPLICATION)
+  id("dagger.hilt.android.plugin")
   kotlin("android")
   kotlin("kapt")
 }
@@ -19,7 +20,7 @@ android {
   }
 
   buildTypes {
-    getByName("release") {
+    release {
       isMinifyEnabled = false
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
     }
@@ -55,17 +56,56 @@ dependencies {
   implementation(project(Modules.TRACKER_DOMAIN))
   implementation(project(Modules.TRACKER_PRESENTATION))
 
+  implementation(Libs.APP_COMPAT)
   implementation(Libs.CORE_KTX)
-  implementation(Libs.COMPOSE_UI)
-  implementation(Libs.COMPOSE_MATERIAL)
   implementation(Libs.MATERIAL)
   implementation(Libs.LIFECYCLE_RUNTIME_KTX)
+  implementation(Libs.LIFECYCLE_VIEWMODEL_COMPOSE)
   implementation(Libs.ACTIVITY_COMPOSE)
+  implementation(Libs.COMPOSE_UI)
+  implementation(Libs.COMPOSE_COMPILER)
+  implementation(Libs.COMPOSE_MATERIAL)
+  implementation(Libs.COMPOSE_RUNTIME)
+  implementation(Libs.COIL_COMPOSE)
+  implementation(Libs.NAVIGATION_COMPOSE)
+  implementation(Libs.HILT_ANDROID)
+  implementation(Libs.HILT_NAVIGATION_COMPOSE)
+  implementation(Libs.RETROFIT)
+  implementation(Libs.RETROFIT_MOSHI_CONVERTER)
+  implementation(Libs.OKHTTP)
+  implementation(Libs.OKHTTP_LOGGING_INTERCEPTOR)
+  implementation(Libs.ROOM_RUNTIME)
+  implementation(Libs.ROOM_KTX)
+  kapt(Libs.HILT_COMPILER)
+  kapt(Libs.ROOM_COMPILER)
+
+  debugImplementation(Libs.COMPOSE_UI_TOOLING)
+  debugImplementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
+  debugImplementation(Libs.COMPOSE_TEST_MANIFEST)
+
   testImplementation(Libs.JUNIT)
   androidTestImplementation(Libs.EXT_JUNIT)
   androidTestImplementation(Libs.ESPRESSO_CORE)
   androidTestImplementation(Libs.COMPOSE_TEST)
-  debugImplementation(Libs.COMPOSE_TOOLING)
-  debugImplementation(Libs.COMPOSE_TOOLING_PREVIEW)
-  debugImplementation(Libs.COMPOSE_TEST_MANIFEST)
+
+//  testImplementation(Testing.junit4)
+//  testImplementation(Testing.junitAndroidExt)
+//  testImplementation(Testing.truth)
+//  testImplementation(Testing.coroutines)
+//  testImplementation(Testing.turbine)
+//  testImplementation(Testing.composeUiTest)
+//  testImplementation(Testing.mockk)
+//  testImplementation(Testing.mockWebServer)
+
+//  androidTestImplementation(Testing.junit4)
+//  androidTestImplementation(Testing.junitAndroidExt)
+//  androidTestImplementation(Testing.truth)
+//  androidTestImplementation(Testing.coroutines)
+//  androidTestImplementation(Testing.turbine)
+//  androidTestImplementation(Testing.composeUiTest)
+//  androidTestImplementation(Testing.mockkAndroid)
+//  androidTestImplementation(Testing.mockWebServer)
+//  androidTestImplementation(Testing.hiltTesting)
+//  kaptAndroidTest(DaggerHilt.hiltCompiler)
+//  androidTestImplementation(Testing.testRunner)
 }
